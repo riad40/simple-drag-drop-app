@@ -95,6 +95,11 @@ class ProjectInput {
         }
         return [enteredTitle, enteredDescription, +enteredPeople];
     }
+    clearInputs() {
+        this.titleInputElement.value = '';
+        this.descriptionInputElement.value = '';
+        this.peopleInputElement.value = '';
+    }
     submitHandler(event) {
         event.preventDefault();
         const userInput = this.gatherUserInput();
@@ -102,6 +107,7 @@ class ProjectInput {
             const [title, desc, people] = userInput;
             console.log(title, desc, people);
         }
+        this.clearInputs();
     }
     attach() {
         this.hostElement.insertAdjacentElement('afterbegin', this.formElement);
