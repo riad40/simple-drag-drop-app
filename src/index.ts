@@ -51,10 +51,21 @@ class ProjectInput {
         this.peopleInputElement = this.formElement.querySelector('#people') as HTMLInputElement
 
         this.attach()
+
+        this.configure()
+    }
+
+    private submitHandler(event: Event) {
+        event.preventDefault()
+        console.log(this.titleInputElement.value)
     }
 
     private attach() {
-        this.hostElement.insertAdjacentElement('afterbegin', this.formElement)
+        this.hostElement.insertAdjacentElement('afterbegin', this.formElement.bind(this))
+    }
+
+    private configure() {
+        this.formElement.addEventListener('submit', this.submitHandler)
     }
 }
 

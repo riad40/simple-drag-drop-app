@@ -31,9 +31,17 @@ class ProjectInput {
         this.descriptionInputElement = this.formElement.querySelector('#description');
         this.peopleInputElement = this.formElement.querySelector('#people');
         this.attach();
+        this.configure();
+    }
+    submitHandler(event) {
+        event.preventDefault();
+        console.log(this.titleInputElement.value);
     }
     attach() {
-        this.hostElement.insertAdjacentElement('afterbegin', this.formElement);
+        this.hostElement.insertAdjacentElement('afterbegin', this.formElement.bind(this));
+    }
+    configure() {
+        this.formElement.addEventListener('submit', this.submitHandler);
     }
 }
 // instantiate classes
