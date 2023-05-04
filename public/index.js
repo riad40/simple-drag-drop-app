@@ -51,9 +51,19 @@ class ProjectInput {
         this.attach();
         this.configure();
     }
+    gatherUserInput() {
+        const enteredTitle = this.titleInputElement.value;
+        const enteredDescription = this.descriptionInputElement.value;
+        const enteredPeople = this.peopleInputElement.value;
+        return [enteredTitle, enteredDescription, +enteredPeople];
+    }
     submitHandler(event) {
         event.preventDefault();
-        console.log(this.titleInputElement.value);
+        const userInput = this.gatherUserInput();
+        if (Array.isArray(userInput)) {
+            const [title, desc, people] = userInput;
+            console.log(title, desc, people);
+        }
     }
     attach() {
         this.hostElement.insertAdjacentElement('afterbegin', this.formElement);
