@@ -1,20 +1,23 @@
 {
-  "name": "simple-drag-drop-app",
-  "version": "1.0.0",
-  "description": "This is simple app that let's you manage the status of your projects ( active &amp;&amp; finished projects ) with drag and drop functionality built using TypeScript allows users to easily move their projects around by clicking and dragging them, resulting in a more intuitive and user-friendly experience.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/riad40/simple-drag-drop-app.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/riad40/simple-drag-drop-app/issues"
-  },
-  "homepage": "https://github.com/riad40/simple-drag-drop-app#readme"
+    "name": "simple-drag-drop-app",
+    "version": "1.0.0",
+    "description": "This is simple app that let's you manage the status of your projects ( active &amp;&amp; finished projects ) with drag and drop functionality built using TypeScript allows users to easily move their projects around by clicking and dragging them, resulting in a more intuitive and user-friendly experience.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "lite-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/riad40/simple-drag-drop-app.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/riad40/simple-drag-drop-app/issues"
+    },
+    "devDependencies": {
+        "lite-server": "^2.5.4"
+    }
 }
