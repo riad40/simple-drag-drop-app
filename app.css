@@ -26,7 +26,6 @@ textarea {
     font: inherit;
     padding: 0.2rem 0.4rem;
     width: 100%;
-    max-width: 30rem;
     border: 1px solid #ccc;
 }
 
@@ -43,6 +42,19 @@ button {
     cursor: pointer;
     color: white;
     padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+#app {
+    width: 50%;
+    max-width: 50rem;
 }
 
 button:focus {
@@ -58,6 +70,7 @@ button:active {
 .projects {
     margin: 1rem;
     border: 1px solid #ff0062;
+    border-radius: 0.5rem;
 }
 
 .projects header {
@@ -66,6 +79,7 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 #finished-projects {
@@ -125,4 +139,5 @@ button:active {
     padding: 1rem;
     border: 1px solid #ff0062;
     background: #f7f7f7;
+    border-radius: 0.5rem;
 }
